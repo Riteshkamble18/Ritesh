@@ -20,16 +20,16 @@ def view_student():
    
     
 def search_student():
-    try:
-      roll = int(input("Enter Student Roll Number :- "))
-      for s in students:
-         if s["Roll"] == roll:
-            print(f"Stuent Found :-  Name:- {s["Name"]} , Marks:-  {s["Marks"]} , Address :- {s["Address"]} ")
-        
-         else:
-           print("Student Not Found..!\n")
-    except ValueError :
-       print("Inavlid Roll Number.! Please Check You Entered is Not integer value..! ")
+    def search_student():
+    roll = int(input("Enter Student Roll Number :- "))
+    found = False
+    for s in students:
+        if s["Roll"] == roll:
+            print(f"Student Found: Name: {s['Name']}, Marks: {s['Marks']}, Address: {s['Address']}")
+            found = True
+            break
+    if not found:
+        print("Student Not Found..!")
 
 def update_student():
    roll = int(input("Enter Student Roll Number :- "))
